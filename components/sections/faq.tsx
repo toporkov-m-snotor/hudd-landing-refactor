@@ -1,10 +1,9 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-
-import { FadeIn, StaggerChildren, fadeItem } from "@/components/ui/fade-in";
+import { AnimatePresence, motion } from "framer-motion";
 import { SectionHeader } from "@/components/ui/section-header";
+import { FadeIn, StaggerChildren, fadeItem } from "@/components/ui/fade-in";
 
 const faqItems = [
   {

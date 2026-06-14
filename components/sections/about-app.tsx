@@ -1,11 +1,10 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-
-import { FadeIn, StaggerChildren, fadeItem } from "@/components/ui/fade-in";
+import { AnimatePresence, motion } from "framer-motion";
 import { SectionHeader } from "@/components/ui/section-header";
+import { FadeIn, StaggerChildren, fadeItem } from "@/components/ui/fade-in";
 
 const features = [
   {
@@ -13,7 +12,7 @@ const features = [
     icon: "🏘️",
     title: "Bli kjent med naboene",
     text: "Finn og knytt kontakt med folk som bor i nærheten, og bygg gode relasjoner i nabolaget ditt.",
-    screen: "/new/about-app/screen_1.png",
+    screen: "/dark/iphone-simulator-map-no.webp",
     color: "bg-brand-accent/10 text-brand-accent",
   },
   {
@@ -21,7 +20,7 @@ const features = [
     icon: "📅",
     title: "Finn lokale arrangementer",
     text: "Følg naboer hvis innlegg du liker, og hold deg oppdatert på det de deler.",
-    screen: "/new/about-app/screen_2.png",
+    screen: "/dark/iphone-simulator-event-no.webp",
     color: "bg-brand-yellow/10 text-brand-yellow",
   },
   {
@@ -29,7 +28,7 @@ const features = [
     icon: "📰",
     title: "Trygt sosialt medium for lokalsamfunnet",
     text: "Les innlegg fra naboene dine, del oppdateringer, anbefalinger og lokale nyheter.",
-    screen: "/new/about-app/screen_3.png",
+    screen: "/dark/iphone-simulator-home-page-no.webp",
     color: "bg-blue-500/10 text-blue-400",
   },
   {
@@ -37,7 +36,7 @@ const features = [
     icon: "🛡️",
     title: "Trygt sosialt medium, for deg og din familie",
     text: "Nyt et trygt miljø med verifiserte medlemmer – en trygg og positiv opplevelse for hele familien.",
-    screen: "/new/about-app/screen_4.png",
+    screen: "/dark/iphone-simulator-chats-no.webp",
     color: "bg-purple-500/10 text-purple-400",
   },
 ];
@@ -105,7 +104,6 @@ export function AboutApp() {
                 <div className="w-72 h-72 rounded-full bg-brand-accent/8 blur-3xl" />
               </div>
 
-              {/* Phone frame */}
               <div className="relative z-10">
                 <motion.div
                   animate={{ y: [0, -8, 0] }}
@@ -114,9 +112,7 @@ export function AboutApp() {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  className="relative"
                 >
-                  {/* Screen sits first so phone frame renders on top as a bezel */}
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={features[activeCard].id}
@@ -124,24 +120,16 @@ export function AboutApp() {
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.4 }}
-                      className="absolute inset-0 flex items-center justify-center"
                     >
                       <Image
                         src={features[activeCard].screen}
                         alt={features[activeCard].title}
-                        width={226}
-                        height={452}
-                        className="object-contain rounded-[2rem]"
+                        width={300}
+                        height={600}
+                        className="object-contain drop-shadow-2xl"
                       />
                     </motion.div>
                   </AnimatePresence>
-                  <Image
-                    src="/new/about-app/phone.png"
-                    alt="Hudd-app på mobil"
-                    width={260}
-                    height={520}
-                    className="relative z-10 drop-shadow-2xl"
-                  />
                 </motion.div>
               </div>
             </div>

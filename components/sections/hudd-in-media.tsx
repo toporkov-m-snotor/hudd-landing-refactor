@@ -1,11 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
-
-import { FadeIn, StaggerChildren, fadeItem } from "@/components/ui/fade-in";
+import Image from "next/image";
+import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/ui/section-header";
+import { FadeIn, StaggerChildren, fadeItem } from "@/components/ui/fade-in";
 
 const featuredArticle = {
   id: "nrk",

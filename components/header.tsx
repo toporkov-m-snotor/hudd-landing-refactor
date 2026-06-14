@@ -1,8 +1,8 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const navLinks = [
   { href: "/", label: "Hjem" },
@@ -16,12 +16,12 @@ export function Header() {
   const headerBg = useTransform(
     scrollY,
     [0, 80],
-    ["rgba(9,13,17,0)", "rgba(9,13,17,0.92)"]
+    ["rgba(9,13,17,0)", "rgba(9,13,17,0.92)"],
   );
   const headerBorder = useTransform(
     scrollY,
     [0, 80],
-    ["rgba(172,184,193,0)", "rgba(172,184,193,0.08)"]
+    ["rgba(172,184,193,0)", "rgba(172,184,193,0.08)"],
   );
 
   useEffect(() => {
@@ -39,15 +39,32 @@ export function Header() {
     <>
       <motion.header
         className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl"
-        style={{ backgroundColor: headerBg, borderBottom: `1px solid`, borderColor: headerBorder }}
+        style={{
+          backgroundColor: headerBg,
+          borderBottom: `1px solid`,
+          borderColor: headerBorder,
+        }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 select-none">
               <div className="relative">
-                <svg width="72" height="20" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <text x="0" y="28" fontSize="32" fontWeight="800" fontFamily="Poppins, sans-serif" fill="white">
+                <svg
+                  width="72"
+                  height="20"
+                  viewBox="0 0 110 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <text
+                    x="0"
+                    y="28"
+                    fontSize="32"
+                    fontWeight="800"
+                    fontFamily="Poppins, sans-serif"
+                    fill="white"
+                  >
                     HUDD
                   </text>
                 </svg>
@@ -102,7 +119,10 @@ export function Header() {
                 className="block w-5 h-0.5 bg-brand-text"
               />
               <motion.span
-                animate={{ rotate: mobileOpen ? -45 : 0, y: mobileOpen ? -6 : 0 }}
+                animate={{
+                  rotate: mobileOpen ? -45 : 0,
+                  y: mobileOpen ? -6 : 0,
+                }}
                 className="block w-5 h-0.5 bg-brand-text origin-center"
               />
             </button>
@@ -114,7 +134,10 @@ export function Header() {
       <motion.div
         className="fixed inset-0 z-40 md:hidden bg-brand-bg/95 backdrop-blur-xl pt-20"
         initial={false}
-        animate={{ opacity: mobileOpen ? 1 : 0, pointerEvents: mobileOpen ? "all" : "none" }}
+        animate={{
+          opacity: mobileOpen ? 1 : 0,
+          pointerEvents: mobileOpen ? "all" : "none",
+        }}
         transition={{ duration: 0.2 }}
       >
         <nav className="flex flex-col items-center gap-6 pt-12">

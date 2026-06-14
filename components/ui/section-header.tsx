@@ -11,7 +11,9 @@ type SectionHeaderProps = {
 export function SectionHeader(props: SectionHeaderProps) {
   const { label, title, description, centered = false, className } = props;
   return (
-    <div className={`flex flex-col gap-4 ${centered ? "items-center text-center" : ""} ${className ?? ""}`}>
+    <div
+      className={`flex flex-col gap-4 ${centered ? "items-center text-center" : ""} ${className ?? ""}`}
+    >
       {label && (
         <FadeIn>
           <span className="inline-block px-3 py-1 text-xs font-semibold tracking-widest uppercase text-brand-accent bg-brand-accent-dim rounded-full border border-brand-accent/20">

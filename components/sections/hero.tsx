@@ -1,8 +1,14 @@
 "use client";
 
-import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import Image from "next/image";
+import {
+  motion,
+  useSpring,
+  useTransform,
+  useMotionValue,
+  AnimatePresence,
+} from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const labels = [

@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 type FadeInProps = {
   children: React.ReactNode;
@@ -13,7 +13,14 @@ type FadeInProps = {
 };
 
 export function FadeIn(props: FadeInProps) {
-  const { children, className, delay = 0, direction = "up", duration = 0.6, once = true } = props;
+  const {
+    children,
+    className,
+    delay = 0,
+    direction = "up",
+    duration = 0.6,
+    once = true,
+  } = props;
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once, margin: "-80px" });
 

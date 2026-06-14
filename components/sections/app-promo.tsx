@@ -1,9 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
-
+import Image from "next/image";
+import { motion } from "framer-motion";
 import { FadeIn } from "@/components/ui/fade-in";
 
 const downloadLinks = [
@@ -112,7 +111,11 @@ export function AppPromo() {
               <motion.div
                 className="relative z-10"
                 animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               >
                 <Image
                   src="/new/app-promo/decor.png"

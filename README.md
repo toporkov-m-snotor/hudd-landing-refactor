@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+  <img src="./app/icon.svg" width="96" alt="Hudd Logo" style="border-radius: 10px" />
+</p>
 
-## Getting Started
+<h4 align="center">Landing page for the Hudd application.</h4>
 
-First, run the development server:
+## 🚀 Local Setup (Quick Start)
+
+1. Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run the application:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The app will be available at `http://localhost:3000`.
 
-## Learn More
+## 📦 Available Commands
 
-To learn more about Next.js, take a look at the following resources:
+All commands below are run with `pnpm`:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Start dev server**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+  ```bash
+  pnpm dev
+  ```
 
-## Deploy on Vercel
+  Starts the Next.js development server on port 3000.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Build for production**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  ```bash
+  pnpm build
+  ```
+
+  Builds the application for production using Next.js.
+
+- **Start production server**
+
+  ```bash
+  pnpm start
+  ```
+
+  Serves the built application locally, useful for testing the production build.
+
+- **Run ESLint**
+
+  ```bash
+  pnpm lint
+  ```
+
+  Lints the codebase using ESLint.
+
+## 🔒 Git Hooks
+
+This project uses [Husky](https://typicode.github.io/husky) with the following hooks:
+
+- **pre-commit** — runs ESLint on staged files and verifies the production build passes.
+- **commit-msg** — enforces [Conventional Commits](https://www.conventionalcommits.org/) format.
+
+Commit message format: `type(scope): subject`
+
+```
+feat: add hero section animation
+fix: correct mobile nav layout
+chore: update dependencies
+```

@@ -15,7 +15,9 @@ export function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <span className="text-2xl font-black text-brand-text tracking-tight">HUDD</span>
+            <span className="text-2xl font-black text-brand-text tracking-tight">
+              HUDD
+            </span>
           </div>
 
           {/* Links */}

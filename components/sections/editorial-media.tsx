@@ -1,8 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 import { FadeIn } from "@/components/ui/fade-in";
 
 export function EditorialMedia() {
@@ -30,8 +29,8 @@ export function EditorialMedia() {
 
               <FadeIn delay={0.1}>
                 <p className="text-brand-muted text-lg leading-relaxed mb-8">
-                  Hudd åpner plattformen for redaksjonelle medier som ønsker å nå
-                  ut til lokale lesere. Del lokale nyheter, arrangementer og
+                  Hudd åpner plattformen for redaksjonelle medier som ønsker å
+                  nå ut til lokale lesere. Del lokale nyheter, arrangementer og
                   viktige saker direkte til de som bor i nærmiljøet.
                 </p>
               </FadeIn>
@@ -64,7 +63,11 @@ export function EditorialMedia() {
                   <motion.div
                     className="flex-1 relative"
                     animate={{ y: [0, -8, 0] }}
-                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                    transition={{
+                      duration: 5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
                   >
                     <Image
                       src="/new/editorial-media/phone_1.png"
@@ -76,7 +79,12 @@ export function EditorialMedia() {
                   <motion.div
                     className="flex-1 relative mt-8"
                     animate={{ y: [0, 8, 0] }}
-                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                    transition={{
+                      duration: 5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 0.5,
+                    }}
                   >
                     <Image
                       src="/new/editorial-media/phone_2.png"
