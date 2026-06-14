@@ -1,16 +1,115 @@
 "use client";
 
-import Link from "next/link";
-import { useEffect, useState } from "react";
+import { routing } from "@/i18n/routing";
+import { useEffect, useRef, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 
-const navLinks = [
-  { href: "/", label: "Hjem" },
-  { href: "/hudd-vs-others", label: "Hudd vs de andre" },
-  { href: "/#faq", label: "FAQ" },
-];
+const localeNames: Record<string, string> = {
+  no: "Norsk",
+  nn: "Nynorsk",
+  da: "Dansk",
+  sv: "Svenska",
+  en: "English",
+};
+
+const localeFlags: Record<string, string> = {
+  no: "🇳🇴",
+  nn: "🇳🇴",
+  da: "🇩🇰",
+  sv: "🇸🇪",
+  en: "🇬🇧",
+};
+
+function LocaleSwitcher() {
+  const t = useTranslations("header");
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function onClickOutside(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", onClickOutside);
+    return () => document.removeEventListener("mousedown", onClickOutside);
+  }, []);
+
+  const switchLocale = (next: string) => {
+    router.replace(pathname, { locale: next });
+    setOpen(false);
+  };
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        onClick={() => setOpen((v) => !v)}
+        aria-label={t("switchLanguage")}
+        className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-brand-surface border border-brand-border text-brand-muted hover:text-brand-text hover:border-brand-border-strong transition-all"
+      >
+        <span>{localeFlags[locale]}</span>
+        <span className="uppercase">{locale}</span>
+        <svg
+          className={`w-3 h-3 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2.5}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+      </button>
+
+      {open && (
+        <div className="absolute right-0 top-full mt-1.5 z-50">
+          <div className="glass-border min-w-35 bg-brand-surface rounded-xl overflow-hidden shadow-xl">
+          {routing.locales.map((loc) => (
+            <button
+              key={loc}
+              onClick={() => switchLocale(loc)}
+              className={`w-full flex items-center gap-2.5 px-3 py-2 text-xs font-medium transition-colors text-left ${
+                loc === locale
+                  ? "text-brand-accent bg-brand-accent-dim"
+                  : "text-brand-muted hover:text-brand-text hover:bg-brand-surface-hover"
+              }`}
+            >
+              <span>{localeFlags[loc]}</span>
+              <span>{localeNames[loc]}</span>
+              {loc === locale && (
+                <svg
+                  className="w-3 h-3 ml-auto text-brand-accent"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2.5}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              )}
+            </button>
+          ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export function Header() {
+  const t = useTranslations("header");
   const [mobileOpen, setMobileOpen] = useState(false);
   const { scrollY } = useScroll();
   const headerBg = useTransform(
@@ -23,6 +122,12 @@ export function Header() {
     [0, 80],
     ["rgba(172,184,193,0)", "rgba(172,184,193,0.08)"],
   );
+
+  const navLinks = [
+    { href: "/" as const, label: t("home") },
+    { href: "/hudd-vs-others" as const, label: t("huddVsOthers") },
+    { href: "/#faq" as const, label: t("faq") },
+  ];
 
   useEffect(() => {
     if (mobileOpen) {
@@ -84,24 +189,25 @@ export function Header() {
               ))}
             </nav>
 
-            {/* Auth buttons */}
+            {/* Desktop right: locale switcher + auth buttons */}
             <div className="hidden md:flex items-center gap-3">
-              <Link
+              <LocaleSwitcher />
+              <a
                 href="https://hudd.no"
                 target="_blank"
                 rel="noreferrer"
-                className="px-4 py-2 text-sm font-medium text-brand-muted hover:text-brand-text transition-colors"
+                className="px-4 py-2 text-sm font-medium text-brand-muted border border-brand-border rounded-xl hover:text-brand-text hover:border-brand-border-strong transition-all"
               >
-                Logg inn
-              </Link>
-              <Link
+                {t("login")}
+              </a>
+              <a
                 href="https://hudd.no"
                 target="_blank"
                 rel="noreferrer"
                 className="px-4 py-2 text-sm font-semibold bg-brand-btn text-brand-bg rounded-xl hover:bg-brand-btn-hover transition-colors"
               >
-                Opprett bruker
-              </Link>
+                {t("signup")}
+              </a>
             </div>
 
             {/* Mobile burger */}
@@ -157,21 +263,31 @@ export function Header() {
               </Link>
             </motion.div>
           ))}
+
           <motion.div
-            className="flex flex-col items-center gap-4 mt-6"
+            className="flex flex-col items-center gap-4 mt-2"
             initial={false}
             animate={{ opacity: mobileOpen ? 1 : 0, y: mobileOpen ? 0 : 10 }}
             transition={{ duration: 0.25, delay: 0.2 }}
           >
-            <Link
+            <LocaleSwitcher />
+          </motion.div>
+
+          <motion.div
+            className="flex flex-col items-center gap-4 mt-4"
+            initial={false}
+            animate={{ opacity: mobileOpen ? 1 : 0, y: mobileOpen ? 0 : 10 }}
+            transition={{ duration: 0.25, delay: 0.25 }}
+          >
+            <a
               href="https://hudd.no"
               target="_blank"
               rel="noreferrer"
               onClick={() => setMobileOpen(false)}
               className="px-8 py-3 text-base font-semibold bg-brand-btn text-brand-bg rounded-xl"
             >
-              Opprett bruker
-            </Link>
+              {t("signup")}
+            </a>
           </motion.div>
         </nav>
       </motion.div>

@@ -10,42 +10,32 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-
-const labels = [
-  "Kun ekte brukere",
-  "Ingen algoritme",
-  "Ingen misbruk eller deling av data",
-];
-
-const ROTATING_WORDS = [
-  "nabolaget ditt",
-  "naboene dine",
-  "lokalsamfunnet",
-  "nærmiljøet ditt",
-];
+import { useTranslations } from "next-intl";
 
 function RotatingWord() {
+  const t = useTranslations("hero");
+  const words = [t("word0"), t("word1"), t("word2"), t("word3")];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const t = setInterval(() => {
-      setIndex((i) => (i + 1) % ROTATING_WORDS.length);
+    const timer = setInterval(() => {
+      setIndex((i) => (i + 1) % words.length);
     }, 3500);
-    return () => clearInterval(t);
-  }, []);
+    return () => clearInterval(timer);
+  }, [words.length]);
 
   return (
-    <span className="relative inline-block overflow-hidden h-[1.3em] align-[-0.15em]">
+    <span className="relative block overflow-hidden h-[1.3em]">
       <AnimatePresence mode="wait" initial={false}>
         <motion.span
           key={index}
-          className="gradient-text-accent block"
+          className="gradient-text-accent block leading-[1.3]"
           initial={{ y: "110%", opacity: 0 }}
           animate={{ y: "0%", opacity: 1 }}
           exit={{ y: "-110%", opacity: 0 }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
-          {ROTATING_WORDS[index]}
+          {words[index]}
         </motion.span>
       </AnimatePresence>
     </span>
@@ -92,18 +82,13 @@ type HeroCardProps = {
   className?: string;
 };
 
-function HeroCard(props: HeroCardProps) {
-  const { children, delay, className = "" } = props;
+function HeroCard({ children, delay, className = "" }: HeroCardProps) {
   return (
     <motion.div
       className={`glass-border rounded-2xl bg-brand-surface p-5 ${className}`}
       initial={{ opacity: 0, y: 32 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{
-        duration: 0.7,
-        delay: delay ?? 0,
-        ease: [0.22, 1, 0.36, 1],
-      }}
+      transition={{ duration: 0.7, delay: delay ?? 0, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
     </motion.div>
@@ -111,13 +96,19 @@ function HeroCard(props: HeroCardProps) {
 }
 
 export function Hero() {
+  const t = useTranslations("hero");
+  const labels = [t("label0"), t("label1"), t("label2")];
+  const tags = [
+    { label: t("tag0"), color: "bg-orange-500/10 text-orange-400" },
+    { label: t("tag1"), color: "bg-blue-500/10 text-blue-400" },
+    { label: t("tag2"), color: "bg-brand-accent/10 text-brand-accent" },
+    { label: t("tag3"), color: "bg-purple-500/10 text-purple-400" },
+  ];
+
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden pt-20">
-      {/* Background */}
       <div className="absolute inset-0 dot-grid opacity-40" />
       <div className="absolute inset-0 bg-gradient-to-b from-brand-bg via-brand-bg/80 to-brand-bg" />
-
-      {/* Glow orbs */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-brand-accent/5 blur-3xl pointer-events-none" />
       <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-blue-500/4 blur-3xl pointer-events-none" />
 
@@ -151,7 +142,8 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
         >
-          Gjenoppdag <RotatingWord />
+          <span className="block">{t("headline")}</span>
+          <RotatingWord />
         </motion.h1>
 
         <motion.p
@@ -160,8 +152,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.25 }}
         >
-          Ingen algoritmer, ingen deling av data og et lokalt fokus. Den norske
-          sosiale plattformen med kun ekte brukere.
+          {t("description")}
         </motion.p>
 
         {/* CTA buttons */}
@@ -226,32 +217,17 @@ export function Hero() {
             <HeroCard delay={0.5}>
               <div className="flex items-start gap-4">
                 <div className="shrink-0 w-10 h-10 rounded-xl bg-brand-accent-dim flex items-center justify-center">
-                  <svg
-                    className="w-5 h-5 text-brand-accent"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-                    />
+                  <svg className="w-5 h-5 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
                   </svg>
                 </div>
                 <div>
                   <p className="text-xs text-brand-muted mb-1">
-                    Publisert i:{" "}
-                    <span className="text-brand-accent">Din lokale gruppe</span>
+                    {t("card1PublishedIn")}{" "}
+                    <span className="text-brand-accent">{t("card1LocalGroup")}</span>
                   </p>
-                  <h3 className="font-semibold text-brand-text mb-1">
-                    Hold deg oppdatert!
-                  </h3>
-                  <p className="text-sm text-brand-muted">
-                    Motta informasjon i sanntid om hendelser i kommunen din og
-                    fra kommunen selv
-                  </p>
+                  <h3 className="font-semibold text-brand-text mb-1">{t("card1Title")}</h3>
+                  <p className="text-sm text-brand-muted">{t("card1Description")}</p>
                 </div>
               </div>
             </HeroCard>
@@ -259,48 +235,18 @@ export function Hero() {
             <HeroCard delay={0.6}>
               <div className="flex items-start gap-4">
                 <div className="shrink-0 w-10 h-10 rounded-xl bg-brand-yellow/10 flex items-center justify-center">
-                  <svg
-                    className="w-5 h-5 text-brand-yellow"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
+                  <svg className="w-5 h-5 text-brand-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-brand-text mb-1">
-                    Organiser
-                  </h3>
-                  <p className="text-sm text-brand-muted">
-                    Utforsk Hudds unike verktøy som hjelper deg å organisere
-                    idrettslaget, vennegjengen, skolegruppen og mer.
-                  </p>
+                  <h3 className="font-semibold text-brand-text mb-1">{t("card2Title")}</h3>
+                  <p className="text-sm text-brand-muted">{t("card2Description")}</p>
                 </div>
               </div>
 
-              {/* Avatar pills */}
               <div className="flex gap-2 mt-4 flex-wrap">
-                {[
-                  {
-                    label: "⚽ Sport",
-                    color: "bg-orange-500/10 text-orange-400",
-                  },
-                  { label: "🏫 Skole", color: "bg-blue-500/10 text-blue-400" },
-                  {
-                    label: "📍 Lokalt",
-                    color: "bg-brand-accent/10 text-brand-accent",
-                  },
-                  {
-                    label: "👥 Grupper",
-                    color: "bg-purple-500/10 text-purple-400",
-                  },
-                ].map((tag) => (
+                {tags.map((tag) => (
                   <span
                     key={tag.label}
                     className={`px-2.5 py-1 text-xs font-medium rounded-lg ${tag.color}`}
@@ -314,7 +260,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Bottom gradient fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-brand-bg to-transparent pointer-events-none" />
     </section>
   );

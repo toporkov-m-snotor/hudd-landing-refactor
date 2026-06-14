@@ -3,63 +3,23 @@ import { type Metadata } from "next";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { FadeIn } from "@/components/ui/fade-in";
+import { getTranslations } from "next-intl/server";
 import { SectionHeader } from "@/components/ui/section-header";
 
-export const metadata: Metadata = {
-  title: "Hudd vs de andre – Sammenligning av sosiale medier",
-  description:
-    "Se hvordan Hudd skiller seg fra Facebook, Instagram, X og andre sosiale plattformer.",
-};
+type Props = { params: Promise<{ locale: string }> };
 
-const platforms = [
-  { name: "Hudd", isHudd: true },
-  { name: "Facebook", isHudd: false },
-  { name: "Instagram", isHudd: false },
-  { name: "X / Twitter", isHudd: false },
-  { name: "Snapchat", isHudd: false },
-];
-
-const features = [
-  {
-    label: "Formål",
-    values: [
-      "Enklere hverdag og tettere nærmiljø",
-      "Sosial deling og grupper",
-      "Bilder og video",
-      "Nyheter og debatt",
-      "Underholdning og meldinger",
-    ],
-  },
-  {
-    label: "Lokalt fokus",
-    values: [true, false, false, false, false],
-  },
-  {
-    label: "Ekte mennesker – ingen botter",
-    values: [true, false, false, false, false],
-  },
-  {
-    label: "Verifiserte brukere",
-    values: [true, false, false, false, false],
-  },
-  {
-    label: "Respekterer personvern",
-    values: [true, false, false, false, false],
-  },
-  {
-    label: "Ingen algoritmer",
-    values: [true, false, false, false, false],
-  },
-  {
-    label: "Ingen bannerannonser",
-    values: [true, false, false, false, false],
-  },
-];
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: "metadata.huddVsOthers",
+  });
+  return { title: t("title"), description: t("description") };
+}
 
 type CheckProps = { value: boolean | string };
 
-function Check(props: CheckProps) {
-  const { value } = props;
+function Check({ value }: CheckProps) {
   if (typeof value === "string") {
     return (
       <span className="text-xs text-brand-muted leading-snug">{value}</span>
@@ -92,7 +52,37 @@ function Check(props: CheckProps) {
   );
 }
 
-export default function HuddVsTheOthers() {
+export default async function HuddVsTheOthers({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "huddVsOthers" });
+
+  const platforms = [
+    { name: "Hudd", isHudd: true },
+    { name: "Facebook", isHudd: false },
+    { name: "Instagram", isHudd: false },
+    { name: "X / Twitter", isHudd: false },
+    { name: "Snapchat", isHudd: false },
+  ];
+
+  const features = [
+    {
+      label: t("purposeLabel"),
+      values: [
+        t("huddPurpose"),
+        t("facebookPurpose"),
+        t("instagramPurpose"),
+        t("twitterPurpose"),
+        t("snapchatPurpose"),
+      ],
+    },
+    { label: t("localFocus"), values: [true, false, false, false, false] },
+    { label: t("realPeople"), values: [true, false, false, false, false] },
+    { label: t("verifiedUsers"), values: [true, false, false, false, false] },
+    { label: t("privacyRespect"), values: [true, false, false, false, false] },
+    { label: t("noAlgorithms"), values: [true, false, false, false, false] },
+    { label: t("noBannerAds"), values: [true, false, false, false, false] },
+  ];
+
   return (
     <>
       <Header />
@@ -100,21 +90,20 @@ export default function HuddVsTheOthers() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn className="mb-16 text-center">
             <SectionHeader
-              label="Sammenligning"
-              title="Hudd vs de andre."
-              description="Se hva som gjør Hudd til et annerledes og bedre alternativ til de etablerte plattformene."
+              label={t("sectionLabel")}
+              title={t("title")}
+              description={t("description")}
               centered
             />
           </FadeIn>
 
-          {/* Comparison table */}
           <FadeIn delay={0.1}>
             <div className="overflow-x-auto">
               <table className="w-full min-w-160">
                 <thead>
                   <tr>
                     <th className="text-left pb-4 pr-4 text-brand-subtle text-sm font-medium">
-                      Funksjon
+                      {t("tableHeader")}
                     </th>
                     {platforms.map((p) => (
                       <th
@@ -137,9 +126,7 @@ export default function HuddVsTheOthers() {
                   {features.map((row, i) => (
                     <tr
                       key={row.label}
-                      className={`${
-                        i % 2 === 0 ? "bg-brand-surface/30" : ""
-                      } hover:bg-brand-surface transition-colors`}
+                      className={`${i % 2 === 0 ? "bg-brand-surface/30" : ""} hover:bg-brand-surface transition-colors`}
                     >
                       <td className="py-4 pr-4 text-sm text-brand-muted font-medium rounded-l-lg pl-2">
                         {row.label}
@@ -161,18 +148,15 @@ export default function HuddVsTheOthers() {
             </div>
           </FadeIn>
 
-          {/* CTA */}
           <FadeIn delay={0.2} className="mt-16 text-center">
-            <p className="text-brand-muted mb-6 text-lg">
-              Klar for å prøve noe ekte?
-            </p>
+            <p className="text-brand-muted mb-6 text-lg">{t("ctaText")}</p>
             <Link
               href="https://hudd.no"
               target="_blank"
               rel="noreferrer"
               className="inline-flex px-8 py-4 bg-brand-btn text-brand-bg font-semibold rounded-2xl hover:bg-brand-btn-hover transition-all duration-200 hover:scale-[1.02]"
             >
-              Opprett bruker gratis
+              {t("ctaButton")}
             </Link>
           </FadeIn>
         </div>

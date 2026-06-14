@@ -1,0 +1,260 @@
+{
+  "metadata": {
+    "home": {
+      "title": "Hudd – A friendlier and safer Nordic community",
+      "description": "Discover your local area, get to know your neighbors better and simplify your daily life. Only real users, no algorithms."
+    },
+    "huddVsOthers": {
+      "title": "Hudd vs the others – Social media comparison",
+      "description": "See how Hudd differs from Facebook, Instagram, X and other social platforms."
+    },
+    "privacyPolicy": {
+      "title": "Privacy Policy – Hudd",
+      "description": "Read about how Hudd handles your personal data."
+    },
+    "termsOfUse": {
+      "title": "Terms of Use – Hudd",
+      "description": "Read Hudd's terms of use for the platform."
+    }
+  },
+  "header": {
+    "home": "Home",
+    "huddVsOthers": "Hudd vs the others",
+    "faq": "FAQ",
+    "login": "Log in",
+    "signup": "Sign up",
+    "switchLanguage": "Switch language"
+  },
+  "footer": {
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of Use",
+    "help": "Help",
+    "copyright": "All rights reserved."
+  },
+  "hero": {
+    "label0": "Only real users",
+    "label1": "No algorithm",
+    "label2": "No misuse or sharing of data",
+    "headline": "Rediscover",
+    "word0": "your neighborhood",
+    "word1": "your neighbors",
+    "word2": "your local community",
+    "word3": "your local area",
+    "description": "No algorithms, no data sharing and a local focus. The Nordic social platform with only real users.",
+    "card1PublishedIn": "Posted in:",
+    "card1LocalGroup": "Your local group",
+    "card1Title": "Stay informed!",
+    "card1Description": "Receive real-time information about events in your municipality and from the municipality itself",
+    "card2Title": "Organize",
+    "card2Description": "Explore Hudd's unique tools that help you organize your sports team, friend group, school class and more.",
+    "tag0": "⚽ Sports",
+    "tag1": "🏫 School",
+    "tag2": "📍 Local",
+    "tag3": "👥 Groups"
+  },
+  "appPromo": {
+    "feature0": "📍 Local focus",
+    "feature1": "🔔 Real-time alerts",
+    "feature2": "🔍 Find neighbors",
+    "title": "Rediscover what a social network can do.",
+    "description": "Hudd is a Nordic social platform with one simple goal — to make social media social again."
+  },
+  "statistics": {
+    "sectionLabel": "Community",
+    "title": "Our community grows every day.",
+    "trustText": "People trust our platform",
+    "ratingText": "5.0 average rating",
+    "groupsLabel": "Neighborhood groups",
+    "groupsDesc": "Groups where neighbors share news, organize events and communicate",
+    "usersLabel": "Active users",
+    "usersDesc": "People already using the platform to connect with neighbors",
+    "municipalitiesLabel": "Active municipalities",
+    "municipalitiesDesc": "Municipalities sharing local news and events",
+    "finlandTitle": "Hudd launches in Finland",
+    "finlandYear": "2026",
+    "finlandDesc": "Available in Norway, Denmark and soon Sweden — now Finland on the way too."
+  },
+  "accountTypes": {
+    "sectionLabel": "For everyone",
+    "title": "Different account types on Hudd.",
+    "description": "Hudd is built for everyone — from private individuals to municipalities and businesses.",
+    "privateIndividualsLabel": "Private individuals",
+    "privateIndividualsDesc": "Get to know your neighbors, share local news and build real relationships in your local area.",
+    "municipalitiesLabel": "Municipalities",
+    "municipalitiesDesc": "Communicate directly with residents, share local events and important alerts.",
+    "companiesLabel": "Businesses",
+    "companiesDesc": "Make your business visible locally, reach potential customers and build local presence.",
+    "sportsTeamsLabel": "Sports teams",
+    "sportsTeamsDesc": "Organize practices, announce results and build a strong local sports family.",
+    "schoolsKindergartensLabel": "Schools and kindergartens",
+    "schoolsKindergartensDesc": "Keep parents updated, share events and create safe communication.",
+    "organizationsLabel": "Organizations",
+    "organizationsDesc": "Reach out to members and the local community with relevant information and activities."
+  },
+  "aboutApp": {
+    "sectionLabel": "Our advantages",
+    "title": "What makes the platform special.",
+    "description": "Hudd is designed to enrich your daily life through genuine, local connections.",
+    "feature1Title": "Get to know your neighbors",
+    "feature1Text": "Find and connect with people who live nearby, and build good relationships in your neighborhood.",
+    "feature2Title": "Find local events",
+    "feature2Text": "Follow neighbors whose posts you like, and stay updated on what they share.",
+    "feature3Title": "Safe social platform for your community",
+    "feature3Text": "Read posts from your neighbors, share updates, recommendations and local news.",
+    "feature4Title": "Safe social platform, for you and your family",
+    "feature4Text": "Enjoy a safe environment with verified members – a safe and positive experience for the whole family."
+  },
+  "simpleDashboard": {
+    "sectionLabel": "A simple dashboard",
+    "title": "Your neighborhood in one place.",
+    "map": "Local map",
+    "feed": "News feed",
+    "groups": "Groups",
+    "events": "Events",
+    "messages": "Messages"
+  },
+  "huddInMedia": {
+    "sectionLabel": "News",
+    "title": "Hudd in the media.",
+    "seeAll": "See all articles",
+    "readMore": "Read more"
+  },
+  "reviews": {
+    "sectionLabel": "Our reviews",
+    "title": "What people say about Hudd."
+  },
+  "editorialMedia": {
+    "badge": "Editorial media",
+    "title": "We welcome editorial media.",
+    "description": "Hudd opens the platform for editorial media who want to reach local readers. Share local news, events and important stories directly to those who live in the local area.",
+    "feature1": "Local focus",
+    "feature2": "Real users",
+    "feature3": "No algorithms"
+  },
+  "faq": {
+    "sectionLabel": "FAQ",
+    "title": "Everything you need to know.",
+    "prevPage": "Previous",
+    "nextPage": "Next",
+    "prevAriaLabel": "Previous FAQ page",
+    "nextAriaLabel": "Next FAQ page",
+    "items": [
+      {
+        "question": "What is Hudd?",
+        "answer": "Hudd is a Nordic social media platform designed to build genuine relationships between people who live in the same neighborhood. All users are verified and must use their real names, so you know you are only interacting with real people. The platform is free from manipulative algorithms and intrusive banner ads. Content is shown in chronological order."
+      },
+      {
+        "question": "How is Hudd different from other social media?",
+        "answer": "While other social media platforms are known for making the world smaller, Hudd wants to make your neighborhood bigger. Hudd has a local focus where you are placed in your neighborhood and get your own tab with content from other users in your local area. Instead of algorithms, you decide what content you want to interact with."
+      },
+      {
+        "question": "How do I create an account on Hudd?",
+        "answer": "Search for Hudd in the App Store or Google Play on your smartphone. Download the app, open it and tap 'Continue with BankID' to register. To create a business profile, you must first have a personal profile on Hudd."
+      },
+      {
+        "question": "Is Hudd free?",
+        "answer": "Yes. It costs nothing to register with a personal profile on Hudd, or to use the app. If you create a profile for your business, the first month is free. After this it will cost 399,- per month. For sole traders the monthly price is 149,-. For non-profit and non-commercial associations, Hudd Business is free."
+      },
+      {
+        "question": "Is Hudd available outside Norway?",
+        "answer": "Yes! Hudd is also available in Denmark, and we are launching in Sweden very soon. In the long term, we also plan to make Hudd available in more European countries."
+      },
+      {
+        "question": "Can I use Hudd on a PC?",
+        "answer": "Yes! Hudd is now available on both smartphone and browser. You can therefore use Hudd on PC and Mac via the web. Note that some features are not yet fully implemented in the web version, but these are being added continuously."
+      },
+      {
+        "question": "How do I change my personal information?",
+        "answer": "The only information you can edit yourself within the Hudd app are details about yourself, email address, mobile number, marital status, occupation, children and pets."
+      },
+      {
+        "question": "How do I control who sees my personal information?",
+        "answer": "In Hudd you can decide which information should be visible to others. Go to your profile and tap the three dots in the top right corner to find 'My privacy settings'. Here you can choose between 'All users', 'Friends only' or 'Only me'."
+      },
+      {
+        "question": "Is Hudd a tracking app?",
+        "answer": "No. Hudd does not track your phone's movements. 'Visibility on map' refers to your home address. You can decide who sees your home address on the map via the privacy settings."
+      },
+      {
+        "question": "What does Hudd cost for businesses?",
+        "answer": "The first month is free. After this it costs 399,- per month. For sole traders the price is 149,-/month. For non-profit associations it is free."
+      }
+    ]
+  },
+  "huddVsOthers": {
+    "sectionLabel": "Comparison",
+    "title": "Hudd vs the others.",
+    "description": "See what makes Hudd a different and better alternative to the established platforms.",
+    "tableHeader": "Feature",
+    "ctaText": "Ready to try something real?",
+    "ctaButton": "Sign up for free",
+    "purposeLabel": "Purpose",
+    "huddPurpose": "Easier everyday life and closer community",
+    "facebookPurpose": "Social sharing and groups",
+    "instagramPurpose": "Photos and video",
+    "twitterPurpose": "News and debate",
+    "snapchatPurpose": "Entertainment and messaging",
+    "localFocus": "Local focus",
+    "realPeople": "Real people – no bots",
+    "verifiedUsers": "Verified users",
+    "privacyRespect": "Respects privacy",
+    "noAlgorithms": "No algorithms",
+    "noBannerAds": "No banner ads"
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "lastModifiedLabel": "Last modified:",
+    "lastModifiedDate": "16.03.2026",
+    "intro": "This privacy policy describes how Hudd ('we', 'us' or 'our') collects, uses and discloses your personal information when you create an account and use our mobile application ('the app' or 'Hudd').",
+    "section1Title": "1. Information we collect",
+    "section1Content": "When you use our app, we collect the following information: Personal information (name, date of birth, email, mobile number) via BankID, device information, and when using the alarm function, precise location data may be collected and shared with predefined contacts.",
+    "section2Title": "2. Use of your information",
+    "section2Content": "We use the information to deliver and maintain the app, suggest local content based on residence, provide customer support, and comply with applicable laws.",
+    "section3Title": "3. Sharing of your information",
+    "section3Content": "We only share information with your consent, with service providers who perform services on our behalf, or for legal reasons.",
+    "section4Title": "4. Data retention",
+    "section4Content": "We retain your data as long as you have an active account. You can delete your account at any time. We do not transfer personal data to countries outside the EU/EEA.",
+    "section5Title": "5. Security",
+    "section5Content": "We take reasonable precautions to protect your personal information against unauthorized access.",
+    "section6Title": "6. Your rights",
+    "section6Content": "You can update, correct or delete your personal information in the account settings. You have the right to access, rectification, deletion, and to object to processing.",
+    "section7Title": "7. Changes",
+    "section7Content": "We may update the privacy policy from time to time and will notify you of changes.",
+    "section8Title": "8. Contact us",
+    "section8Content": "Hudd is published by Hudd AS, org. no. 933 270 157. Contact us at legal@hudd.no for privacy-related questions."
+  },
+  "termsOfUse": {
+    "title": "Terms of Use",
+    "effectiveDateLabel": "Effective date:",
+    "effectiveDateValue": "06.11.2024",
+    "intro": "Please read these terms of use carefully before using the Hudd mobile application. Your access to and use of the Service is conditional on your acceptance of and compliance with these Terms.",
+    "disclaimer": "By using our Service, you agree to be bound by these Terms.",
+    "section1Title": "1. Use of our Service",
+    "section1Content": "You are responsible for maintaining the confidentiality and security related to your account. You may not use the Service for any illegal or otherwise unauthorized purpose. If you are under 15 years old, you cannot use Hudd.",
+    "section2Title": "2. Intellectual property",
+    "section2Content": "The Service and its content is and will remain the exclusive property of Hudd and its licensors. The Service is protected by copyright and other mechanisms in both Norway and foreign countries.",
+    "section3Title": "3. Links to other websites",
+    "section3Content": "Our Service may contain links to third party websites or services. Hudd has no control over and assumes no responsibility for the content of such websites.",
+    "section4Title": "4. Termination and suspension",
+    "section4Content": "We may at our sole discretion and without further notice terminate or suspend your access to the Service. You are at any time free to stop using the Service.",
+    "section5Title": "5. Limitation of liability",
+    "section5Content": "Under no circumstances shall Hudd be liable for direct or indirect losses resulting from the Service or your use of the Service.",
+    "section6Title": "6. Changes to these Terms",
+    "section6Content": "We reserve the right to change or replace these Terms at any time. Continued use of the Service constitutes acceptance of the new or amended Terms.",
+    "section7Title": "7. Contact",
+    "section7Content": "If you have questions about these Terms, please contact us at legal@hudd.no.",
+    "section8Title": "8. Governing law and jurisdiction",
+    "section8Content": "This agreement is governed by Norwegian law and the parties submit to Oslo District Court as their jurisdiction."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "backHome": "Back to home"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. Please try again or go back to the home page.",
+    "tryAgain": "Try again",
+    "backHome": "Back to home"
+  }
+}

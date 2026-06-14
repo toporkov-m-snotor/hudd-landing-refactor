@@ -1,13 +1,17 @@
-import Link from "next/link";
+"use client";
 
-const footerLinks = [
-  { label: "Retningslinjer for personvern", href: "/privacy-policy" },
-  { label: "Vilkår for bruk", href: "/terms-of-use" },
-  { label: "Hjelp", href: "mailto:support@hudd.no" },
-];
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export function Footer() {
+  const t = useTranslations("footer");
   const year = new Date().getFullYear();
+
+  const footerLinks = [
+    { label: t("privacyPolicy"), href: "/privacy-policy" as const },
+    { label: t("termsOfUse"), href: "/terms-of-use" as const },
+    { label: t("help"), href: "mailto:support@hudd.no" as const },
+  ];
 
   return (
     <footer className="border-t border-brand-border mt-auto">
@@ -23,19 +27,29 @@ export function Footer() {
           {/* Links */}
           <nav className="flex flex-wrap items-center justify-center gap-6">
             {footerLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm text-brand-subtle hover:text-brand-muted transition-colors"
-              >
-                {link.label}
-              </Link>
+              link.href.startsWith("mailto:") ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm text-brand-subtle hover:text-brand-muted transition-colors"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm text-brand-subtle hover:text-brand-muted transition-colors"
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
           </nav>
 
           {/* Copyright */}
           <p className="text-sm text-brand-subtle">
-            © {year} Hudd. Alle rettigheter reservert.
+            © {year} Hudd. {t("copyright")}
           </p>
         </div>
       </div>

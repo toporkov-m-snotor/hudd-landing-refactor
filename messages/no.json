@@ -1,0 +1,260 @@
+{
+  "metadata": {
+    "home": {
+      "title": "Hudd – Et hyggeligere og tryggere Norden",
+      "description": "Oppdag nærmiljøet ditt, bli bedre kjent med naboene og få en smidigere hverdag. Kun ekte brukere, ingen algoritmer."
+    },
+    "huddVsOthers": {
+      "title": "Hudd vs de andre – Sammenligning av sosiale medier",
+      "description": "Se hvordan Hudd skiller seg fra Facebook, Instagram, X og andre sosiale plattformer."
+    },
+    "privacyPolicy": {
+      "title": "Retningslinjer for personvern – Hudd",
+      "description": "Les om hvordan Hudd behandler dine personopplysninger."
+    },
+    "termsOfUse": {
+      "title": "Vilkår for bruk – Hudd",
+      "description": "Les Hudds vilkår for bruk av plattformen."
+    }
+  },
+  "header": {
+    "home": "Hjem",
+    "huddVsOthers": "Hudd vs de andre",
+    "faq": "FAQ",
+    "login": "Logg inn",
+    "signup": "Opprett bruker",
+    "switchLanguage": "Bytt språk"
+  },
+  "footer": {
+    "privacyPolicy": "Retningslinjer for personvern",
+    "termsOfUse": "Vilkår for bruk",
+    "help": "Hjelp",
+    "copyright": "Alle rettigheter reservert."
+  },
+  "hero": {
+    "label0": "Kun ekte brukere",
+    "label1": "Ingen algoritme",
+    "label2": "Ingen misbruk eller deling av data",
+    "headline": "Gjenoppdag",
+    "word0": "nabolaget ditt",
+    "word1": "naboene dine",
+    "word2": "lokalsamfunnet",
+    "word3": "nærmiljøet ditt",
+    "description": "Ingen algoritmer, ingen deling av data og et lokalt fokus. Den norske sosiale plattformen med kun ekte brukere.",
+    "card1PublishedIn": "Publisert i:",
+    "card1LocalGroup": "Din lokale gruppe",
+    "card1Title": "Hold deg oppdatert!",
+    "card1Description": "Motta informasjon i sanntid om hendelser i kommunen din og fra kommunen selv",
+    "card2Title": "Organiser",
+    "card2Description": "Utforsk Hudds unike verktøy som hjelper deg å organisere idrettslaget, vennegjengen, skolegruppen og mer.",
+    "tag0": "⚽ Sport",
+    "tag1": "🏫 Skole",
+    "tag2": "📍 Lokalt",
+    "tag3": "👥 Grupper"
+  },
+  "appPromo": {
+    "feature0": "📍 Lokalt fokus",
+    "feature1": "🔔 Sanntidsvarsler",
+    "feature2": "🔍 Finn naboer",
+    "title": "Gjenoppdag hva et sosialt medium kan gjøre.",
+    "description": "Hudd er en norsklaget sosial plattform med ett enkelt mål — å gjøre sosiale medier sosiale igjen."
+  },
+  "statistics": {
+    "sectionLabel": "Fellesskap",
+    "title": "Vårt fellesskap vokser hver dag.",
+    "trustText": "Folk stoler på vår plattform",
+    "ratingText": "5.0 gjennomsnittlig vurdering",
+    "groupsLabel": "Nabolagsgrupper",
+    "groupsDesc": "Grupper hvor naboer deler nyheter, organiserer arrangementer og kommuniserer",
+    "usersLabel": "Aktive brukere",
+    "usersDesc": "Folk som allerede bruker plattformen for å koble seg til naboer",
+    "municipalitiesLabel": "Aktive kommuner",
+    "municipalitiesDesc": "Kommuner som deler lokale nyheter og arrangementer",
+    "finlandTitle": "Hudd lanseres i Finland",
+    "finlandYear": "2026",
+    "finlandDesc": "Tilgjengelig i Norge, Danmark og snart Sverige — nå også Finland på vei."
+  },
+  "accountTypes": {
+    "sectionLabel": "For alle",
+    "title": "Ulike kontotyper på Hudd.",
+    "description": "Hudd er bygget for alle — fra privatpersoner til kommuner og bedrifter.",
+    "privateIndividualsLabel": "Private personer",
+    "privateIndividualsDesc": "Bli kjent med naboene, del lokale nyheter og bygg ekte relasjoner i nærmiljøet ditt.",
+    "municipalitiesLabel": "Kommuner",
+    "municipalitiesDesc": "Kommuniser direkte med innbyggerne, del lokale arrangementer og viktige varsler.",
+    "companiesLabel": "Bedrifter",
+    "companiesDesc": "Synliggjør bedriften lokalt, nå potensielle kunder og bygg lokal tilstedeværelse.",
+    "sportsTeamsLabel": "Idrettslag",
+    "sportsTeamsDesc": "Organiser treninger, kunngjør resultater og bygg en sterk lokal idrettsfamilie.",
+    "schoolsKindergartensLabel": "Skoler og barnehager",
+    "schoolsKindergartensDesc": "Hold foreldre oppdatert, del arrangementer og skap trygg kommunikasjon.",
+    "organizationsLabel": "Organisasjoner",
+    "organizationsDesc": "Nå ut til medlemmer og lokalsamfunnet med relevant informasjon og aktiviteter."
+  },
+  "aboutApp": {
+    "sectionLabel": "Våre fordeler",
+    "title": "Hva gjør plattformen spesiell.",
+    "description": "Hudd er designet for å gjøre hverdagen din rikere gjennom ekte, lokale forbindelser.",
+    "feature1Title": "Bli kjent med naboene",
+    "feature1Text": "Finn og knytt kontakt med folk som bor i nærheten, og bygg gode relasjoner i nabolaget ditt.",
+    "feature2Title": "Finn lokale arrangementer",
+    "feature2Text": "Følg naboer hvis innlegg du liker, og hold deg oppdatert på det de deler.",
+    "feature3Title": "Trygt sosialt medium for lokalsamfunnet",
+    "feature3Text": "Les innlegg fra naboene dine, del oppdateringer, anbefalinger og lokale nyheter.",
+    "feature4Title": "Trygt sosialt medium, for deg og din familie",
+    "feature4Text": "Nyt et trygt miljø med verifiserte medlemmer – en trygg og positiv opplevelse for hele familien."
+  },
+  "simpleDashboard": {
+    "sectionLabel": "Et enkelt dashbord",
+    "title": "Ditt nabolag på ett sted.",
+    "map": "Lokalt kart",
+    "feed": "Nyhetsstrøm",
+    "groups": "Grupper",
+    "events": "Arrangementer",
+    "messages": "Meldinger"
+  },
+  "huddInMedia": {
+    "sectionLabel": "News",
+    "title": "Hudd i media.",
+    "seeAll": "Se alle artikler",
+    "readMore": "Les mer"
+  },
+  "reviews": {
+    "sectionLabel": "Våre anmeldelser",
+    "title": "Det folk sier om Hudd."
+  },
+  "editorialMedia": {
+    "badge": "Redaksjonelle medier",
+    "title": "Vi ønsker redaksjonelle medier velkommen.",
+    "description": "Hudd åpner plattformen for redaksjonelle medier som ønsker å nå ut til lokale lesere. Del lokale nyheter, arrangementer og viktige saker direkte til de som bor i nærmiljøet.",
+    "feature1": "Lokalt fokus",
+    "feature2": "Ekte brukere",
+    "feature3": "Ingen algoritmer"
+  },
+  "faq": {
+    "sectionLabel": "FAQ",
+    "title": "Alt du trenger å vite.",
+    "prevPage": "Forrige",
+    "nextPage": "Neste",
+    "prevAriaLabel": "Forrige FAQ-side",
+    "nextAriaLabel": "Neste FAQ-side",
+    "items": [
+      {
+        "question": "Hva er Hudd?",
+        "answer": "Hudd er et norsk sosialt medium designet for å bygge genuine relasjoner mellom mennesker som bor i samme nabolag. Alle brukere er verifisert gjennom Vipps og må bruke sine ekte navn, slik at du vet at du kun interagerer med ekte mennesker. Plattformen er fri for manipulative algoritmer og påtrengende bannerannonser. Innholdet vises i kronologisk rekkefølge etter publiseringstidspunkt."
+      },
+      {
+        "question": "Hvordan skiller Hudd seg fra andre sosiale medier?",
+        "answer": "Mens andre sosiale medieplattformer er kjent for å gjøre verden mindre, vil Hudd gjøre nabolaget ditt større. Hudd har et lokalt fokus hvor du plasseres i nabolaget ditt og får din egen fane med innhold fra andre brukere i ditt nærområde. I stedet for algoritmer får du selv bestemme hvilket innhold du vil interagere med. Hudd skiller seg også fra andre sosiale medier med å kun ha verifiserte brukere, 15-årsaldersgrense og ingen plagsomme bannerannonser."
+      },
+      {
+        "question": "Hvordan oppretter jeg en bruker på Hudd?",
+        "answer": "Søk opp Hudd i App Store eller Google Play på smarttelefonen din. Last ned appen, åpne den og trykk på «Fortsett med Vipps» eller «Fortsett med BankID» for å registrere deg. På nett (PC/Mac) er det foreløpig kun mulig å logge inn med Vipps. For å opprette en bedriftsprofil, må du først ha en personlig profil på Hudd."
+      },
+      {
+        "question": "Er Hudd gratis?",
+        "answer": "Ja. Det koster ingenting å registrere seg med en personlig profil på Hudd, eller å bruke appen. Om du lager en profil for din bedrift er den første måneden gratis. Etter dette vil det koste 399,- per måned. For enkeltpersonforetak er månedsprisen på 149,-. For ideelle og ikke-kommersielle lag og foreninger er Hudd Bedrift gratis."
+      },
+      {
+        "question": "Er Hudd tilgjengelig utenfor Norge?",
+        "answer": "Ja! Hudd er også tilgjengelig i Danmark, og vi lanserer i Sverige veldig snart. På sikt planlegger vi også å gjøre Hudd tilgjengelig i flere europeiske land."
+      },
+      {
+        "question": "Kan jeg registrere meg på Hudd uten Vipps?",
+        "answer": "Ja, du kan nå også registrere deg og logge inn med BankID. Vi bruker Vipps og BankID fordi dette er blant de sikreste innloggingsmetodene. De sørger for trygg verifisering av brukere uten at du trenger å lage eget passord. Hudd henter kun navn, fødselsdato, e-postadresse og mobilnummer – aldri kontonummer eller andre bankopplysninger."
+      },
+      {
+        "question": "Kan jeg bruke Hudd på PC?",
+        "answer": "Ja! Hudd er nå tilgjengelig både på smarttelefon og nettleser. Du kan dermed bruke Hudd på PC og Mac via web. Merk at noen funksjoner ennå ikke er fullt implementert i nettversjonen, men dette kommer fortløpende i tiden fremover."
+      },
+      {
+        "question": "Hvordan endrer jeg mine personlige opplysninger?",
+        "answer": "De eneste opplysningene du kan redigere selv inne i Hudd-appen er opplysninger om deg, e-postadresse, mobilnummer, sivilstatus, yrke, barn og kjæledyr. For å endre ditt fulle navn og adresse i Hudd må du først endre disse opplysningene i Folkeregisteret."
+      },
+      {
+        "question": "Hvordan bestemmer jeg hvem som ser mine personlige opplysninger?",
+        "answer": "I Hudd kan du selv bestemme hvilken informasjon som skal være synlig for andre enn deg selv. Gå til din profil og trykk på de tre prikkene øverst i høyre hjørne for å finne «Mine personverninnstillinger». Her kan du velge mellom «Alle brukere», «Bare venner» eller «Bare meg»."
+      },
+      {
+        "question": "Er Hudd en sporingsapp?",
+        "answer": "Nei. Hudd følger ikke bevegelsene til telefonen din. «Synlighet i kart» refererer til bostedsadressen din. Du kan selv bestemme hvem som ser bostedsadressen din i kartet via personverninnstillingene."
+      }
+    ]
+  },
+  "huddVsOthers": {
+    "sectionLabel": "Sammenligning",
+    "title": "Hudd vs de andre.",
+    "description": "Se hva som gjør Hudd til et annerledes og bedre alternativ til de etablerte plattformene.",
+    "tableHeader": "Funksjon",
+    "ctaText": "Klar for å prøve noe ekte?",
+    "ctaButton": "Opprett bruker gratis",
+    "purposeLabel": "Formål",
+    "huddPurpose": "Enklere hverdag og tettere nærmiljø",
+    "facebookPurpose": "Sosial deling og grupper",
+    "instagramPurpose": "Bilder og video",
+    "twitterPurpose": "Nyheter og debatt",
+    "snapchatPurpose": "Underholdning og meldinger",
+    "localFocus": "Lokalt fokus",
+    "realPeople": "Ekte mennesker – ingen botter",
+    "verifiedUsers": "Verifiserte brukere",
+    "privacyRespect": "Respekterer personvern",
+    "noAlgorithms": "Ingen algoritmer",
+    "noBannerAds": "Ingen bannerannonser"
+  },
+  "privacyPolicy": {
+    "title": "Personvernerklæring",
+    "lastModifiedLabel": "Sist endret:",
+    "lastModifiedDate": "16.03.2026",
+    "intro": "Denne personvernerklæringen beskriver hvordan Hudd («vi», «oss» eller «vår») samler inn, bruker og utleverer din personlige informasjon når du oppretter konto og bruker mobilapplikasjonen vår («appen» eller «Hudd»).",
+    "section1Title": "1. Informasjon vi samler inn",
+    "section1Content": "Når du bruker appen vår, samler vi inn følgende informasjon: Personlig informasjon (navn, fødselsdato, e-post, mobilnummer) via Vipps/BankID, enhetsinformasjon, og ved bruk av alarmfunksjon kan nøyaktig lokasjonsdata samles inn og deles med forhåndsdefinerte kontakter.",
+    "section2Title": "2. Bruk av din informasjon",
+    "section2Content": "Vi bruker informasjonen til å levere og vedlikeholde appen, foreslå lokalt innhold basert på bosted, gi kundestøtte, og overholde gjeldende lover.",
+    "section3Title": "3. Deling av din informasjon",
+    "section3Content": "Vi deler informasjon kun med ditt samtykke, med tjenesteleverandører som utfører tjenester på våre vegne, eller av juridiske grunner.",
+    "section4Title": "4. Dataoppbevaring",
+    "section4Content": "Vi beholder dine data så lenge du har en aktiv konto. Du kan slette kontoen når som helst. Vi overfører ikke personopplysninger til land utenfor EU/EØS.",
+    "section5Title": "5. Sikkerhet",
+    "section5Content": "Vi tar rimelige forholdsregler for å beskytte din personlige informasjon mot uautorisert tilgang.",
+    "section6Title": "6. Dine rettigheter",
+    "section6Content": "Du kan oppdatere, rette eller slette din personlige informasjon i kontoinnstillingene. Du har rett til innsyn, retting, sletting, og protestere mot behandling.",
+    "section7Title": "7. Endringer",
+    "section7Content": "Vi kan oppdatere personvernerklæringen fra tid til annen og vil varsle deg ved endringer.",
+    "section8Title": "8. Kontakt oss",
+    "section8Content": "Hudd gis ut av Hudd AS, org.no. 933 270 157. Kontakt oss på legal@hudd.no for spørsmål om personvern. Du har rett til å klage til Datatilsynet."
+  },
+  "termsOfUse": {
+    "title": "Vilkår for bruk",
+    "effectiveDateLabel": "Ikrafttredelsesdato:",
+    "effectiveDateValue": "06.11.2024",
+    "intro": "Vennligst les disse brukervilkårene nøye før du bruker Hudd mobilapplikasjonen. Din tilgang til og bruk av Tjenesten er betinget av din aksept av og overholdelse av disse Vilkårene.",
+    "disclaimer": "Ved å bruke Tjenesten vår, godtar du å være bundet av disse Vilkårene.",
+    "section1Title": "1. Bruk av vår Tjeneste",
+    "section1Content": "Du er ansvarlig for å opprettholde konfidensialiteten og sikkerheten relatert til kontoen din. Du kan ikke bruke Tjenesten til noe ulovlig eller på annen måte ikke tillatt formål. Dersom du er yngre enn 15 år kan du ikke bruke Hudd.",
+    "section2Title": "2. Immaterielle rettigheter",
+    "section2Content": "Tjenesten og dens innhold er og vil forbli den eksklusive eiendommen til Hudd og dets lisensgivere. Tjenesten er beskyttet av opphavsrett og andre mekanismer i både Norge og fremmede land.",
+    "section3Title": "3. Lenker til andre nettsteder",
+    "section3Content": "Tjenesten vår kan inneholde lenker til tredjeparts nettsteder eller tjenester. Hudd har ingen kontroll over og påtar seg intet ansvar for innholdet til slike nettsteder.",
+    "section4Title": "4. Oppsigelse og suspensjon",
+    "section4Content": "Vi kan etter eget skjønn og uten nærmere varsel avslutte eller suspendere tilgangen din til Tjenesten. Du har til enhver tid adgang til å avslutte bruken av Tjenesten.",
+    "section5Title": "5. Ansvarsbegrensning",
+    "section5Content": "Under ingen omstendigheter skal Hudd være ansvarlige for direkte eller indirekte tap som følge av Tjenesten eller din bruk av Tjenesten.",
+    "section6Title": "6. Endringer i disse Vilkårene",
+    "section6Content": "Vi forbeholder oss retten til å endre eller erstatte disse Vilkårene når som helst. Ved fortsatt bruk av Tjenesten anses de nye eller endrede Vilkår som akseptert.",
+    "section7Title": "7. Kontakt",
+    "section7Content": "Hvis du har spørsmål om disse Vilkårene, vennligst kontakt oss på legal@hudd.no.",
+    "section8Title": "8. Lov og verneting",
+    "section8Content": "Denne avtalen reguleres av norsk rett og partene vedtar Oslo tingrett som sitt verneting."
+  },
+  "notFound": {
+    "title": "Siden ble ikke funnet",
+    "description": "Siden du leter etter finnes ikke eller har blitt flyttet.",
+    "backHome": "Tilbake til forsiden"
+  },
+  "error": {
+    "title": "Noe gikk galt",
+    "description": "Det oppstod en uventet feil. Prøv igjen eller gå tilbake til forsiden.",
+    "tryAgain": "Prøv igjen",
+    "backHome": "Tilbake til forsiden"
+  }
+}

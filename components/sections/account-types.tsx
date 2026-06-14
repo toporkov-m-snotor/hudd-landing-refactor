@@ -2,76 +2,72 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { FadeIn } from "@/components/ui/fade-in";
 import { AnimatePresence, motion } from "framer-motion";
 import { SectionHeader } from "@/components/ui/section-header";
 
-const accountTypes = [
-  {
-    key: "privateIndividuals",
-    label: "Private personer",
-    icon: "👤",
-    img: "/new/account-types/private_individuals.jpg",
-    description:
-      "Bli kjent med naboene, del lokale nyheter og bygg ekte relasjoner i nærmiljøet ditt.",
-  },
-  {
-    key: "municipalities",
-    label: "Kommuner",
-    icon: "🏛️",
-    img: "/new/account-types/municipalities.jpg",
-    description:
-      "Kommuniser direkte med innbyggerne, del lokale arrangementer og viktige varsler.",
-  },
-  {
-    key: "companies",
-    label: "Bedrifter",
-    icon: "🏢",
-    img: "/new/account-types/companies.jpg",
-    description:
-      "Synliggjør bedriften lokalt, nå potensielle kunder og bygg lokal tilstedeværelse.",
-  },
-  {
-    key: "sportsTeams",
-    label: "Idrettslag",
-    icon: "⚽",
-    img: "/new/account-types/sports_teams.jpg",
-    description:
-      "Organiser treninger, kunngjør resultater og bygg en sterk lokal idrettsfamilie.",
-  },
-  {
-    key: "schoolsKindergartens",
-    label: "Skoler og barnehager",
-    icon: "🎒",
-    img: "/new/account-types/schools_and_kindergartens.jpg",
-    description:
-      "Hold foreldre oppdatert, del arrangementer og skap trygg kommunikasjon.",
-  },
-  {
-    key: "organizations",
-    label: "Organisasjoner",
-    icon: "🤝",
-    img: "/new/account-types/organizations.jpg",
-    description:
-      "Nå ut til medlemmer og lokalsamfunnet med relevant informasjon og aktiviteter.",
-  },
-];
-
 export function AccountTypes() {
+  const t = useTranslations("accountTypes");
   const [active, setActive] = useState(0);
+
+  const accountTypes = [
+    {
+      key: "privateIndividuals",
+      label: t("privateIndividualsLabel"),
+      icon: "👤",
+      img: "/new/account-types/private_individuals.jpg",
+      description: t("privateIndividualsDesc"),
+    },
+    {
+      key: "municipalities",
+      label: t("municipalitiesLabel"),
+      icon: "🏛️",
+      img: "/new/account-types/municipalities.jpg",
+      description: t("municipalitiesDesc"),
+    },
+    {
+      key: "companies",
+      label: t("companiesLabel"),
+      icon: "🏢",
+      img: "/new/account-types/companies.jpg",
+      description: t("companiesDesc"),
+    },
+    {
+      key: "sportsTeams",
+      label: t("sportsTeamsLabel"),
+      icon: "⚽",
+      img: "/new/account-types/sports_teams.jpg",
+      description: t("sportsTeamsDesc"),
+    },
+    {
+      key: "schoolsKindergartens",
+      label: t("schoolsKindergartensLabel"),
+      icon: "🎒",
+      img: "/new/account-types/schools_and_kindergartens.jpg",
+      description: t("schoolsKindergartensDesc"),
+    },
+    {
+      key: "organizations",
+      label: t("organizationsLabel"),
+      icon: "🤝",
+      img: "/new/account-types/organizations.jpg",
+      description: t("organizationsDesc"),
+    },
+  ];
+
   const current = accountTypes[active];
 
   return (
     <section className="py-24 sm:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          label="For alle"
-          title="Ulike kontotyper på Hudd."
-          description="Hudd er bygget for alle — fra privatpersoner til kommuner og bedrifter."
+          label={t("sectionLabel")}
+          title={t("title")}
+          description={t("description")}
         />
 
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Tabs */}
           <FadeIn direction="left">
             <div className="flex flex-col gap-2">
               {accountTypes.map((type, i) => (
@@ -84,13 +80,9 @@ export function AccountTypes() {
                       : "hover:bg-brand-surface border border-transparent"
                   }`}
                 >
-                  <span className="text-2xl w-10 text-center shrink-0">
-                    {type.icon}
-                  </span>
+                  <span className="text-2xl w-10 text-center shrink-0">{type.icon}</span>
                   <div className="flex-1">
-                    <p
-                      className={`font-semibold transition-colors ${active === i ? "text-brand-text" : "text-brand-muted"}`}
-                    >
+                    <p className={`font-semibold transition-colors ${active === i ? "text-brand-text" : "text-brand-muted"}`}>
                       {type.label}
                     </p>
                     {active === i && (
@@ -115,7 +107,6 @@ export function AccountTypes() {
             </div>
           </FadeIn>
 
-          {/* Image */}
           <FadeIn direction="right">
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden">
               <AnimatePresence mode="wait">
@@ -138,7 +129,6 @@ export function AccountTypes() {
                 </motion.div>
               </AnimatePresence>
 
-              {/* Overlay label */}
               <div className="absolute bottom-6 left-6 right-6 z-10">
                 <AnimatePresence mode="wait">
                   <motion.div
