@@ -45,7 +45,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} className={poppins.variable}>
-      <body className="min-h-dvh bg-brand-bg text-brand-text font-sans antialiased">
+      <body className="min-h-svh bg-brand-bg text-brand-text font-sans antialiased">
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

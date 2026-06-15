@@ -11,13 +11,13 @@ export default async function NotFound() {
   return (
     <>
       <Header />
-      <main className="relative flex min-h-[calc(100dvh-80px)] items-center justify-center [overflow:clip]">
+      <main className="relative flex min-h-[calc(100dvh-80px)] items-center justify-center overflow-clip">
         <div className="dot-grid absolute inset-0 opacity-40" />
         <div className="absolute inset-0 bg-linear-to-b from-brand-bg via-brand-bg/80 to-brand-bg" />
         <div className="pointer-events-none absolute top-1/2 left-1/2 h-150 w-150 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-accent/5 blur-3xl" />
 
-        <div className="pointer-events-none absolute inset-0 select-none [overflow:clip]">
-          <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap text-[28vw] font-bold leading-none text-white/[0.025]">
+        <div className="pointer-events-none absolute inset-0 select-none overflow-clip">
+          <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap text-[28vw] font-bold leading-none text-white/2.5">
             404
           </span>
         </div>
@@ -44,7 +44,7 @@ export default async function NotFound() {
               404
             </span>
 
-            <h1 className="gradient-text mb-4 text-4xl font-bold sm:text-5xl">
+            <h1 className="gradient-text leading-normal h-auto mb-4 text-4xl font-bold sm:text-5xl">
               {t("title")}
             </h1>
             <p className="mb-10 text-lg leading-relaxed text-brand-muted">
